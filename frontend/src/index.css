@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --aviation-navy: #0f172a;
+    --aviation-blue: #0284c7;
+    --aviation-dark: #090d16;
+  }
+
+  body {
+    background-color: var(--theme-bg, #f8fafc);
+    color: var(--theme-text, #1e293b);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* 6 Themes */
+body.theme-aero-light {
+  --theme-bg: #f8fafc;
+  --theme-text: #0f172a;
+  --theme-card: #ffffff;
+  --theme-border: #e2e8f0;
+  --theme-accent: #0284c7;
+}
+
+body.theme-midnight {
+  --theme-bg: #090e17;
+  --theme-text: #f1f5f9;
+  --theme-card: #0f172a;
+  --theme-border: #1e293b;
+  --theme-accent: #38bdf8;
+}
+
+body.theme-ocean {
+  --theme-bg: #04121f;
+  --theme-text: #e0f2fe;
+  --theme-card: #082138;
+  --theme-border: #0c365c;
+  --theme-accent: #06b6d4;
+}
+
+body.theme-emerald {
+  --theme-bg: #06140e;
+  --theme-text: #ecfdf5;
+  --theme-card: #0c261b;
+  --theme-border: #143d2c;
+  --theme-accent: #10b981;
+}
+
+body.theme-purple {
+  --theme-bg: #0e0a1a;
+  --theme-text: #f5f3ff;
+  --theme-card: #18122b;
+  --theme-border: #291e47;
+  --theme-accent: #a855f7;
+}
+
+body.theme-high-contrast {
+  --theme-bg: #000000;
+  --theme-text: #ffffff;
+  --theme-card: #121212;
+  --theme-border: #ffffff;
+  --theme-accent: #facc15;
+}
+
+/* Theme dark card overrides */
+body:not(.theme-aero-light) .bg-white {
+  background-color: var(--theme-card) !important;
+  color: var(--theme-text) !important;
+  border-color: var(--theme-border) !important;
+}
+
+body:not(.theme-aero-light) .bg-slate-50 {
+  background-color: var(--theme-bg) !important;
+}
+
+body:not(.theme-aero-light) .bg-slate-100 {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body:not(.theme-aero-light) .border-slate-200,
+body:not(.theme-aero-light) .border-slate-200\/90,
+body:not(.theme-aero-light) .border-slate-100 {
+  border-color: var(--theme-border) !important;
+}
+
+body:not(.theme-aero-light) .text-slate-900 {
+  color: var(--theme-text) !important;
+}
+
+body:not(.theme-aero-light) .text-slate-800 {
+  color: #e2e8f0 !important;
+}
+
+body:not(.theme-aero-light) .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+body:not(.theme-aero-light) .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+body:not(.theme-aero-light) .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+body:not(.theme-aero-light) input,
+body:not(.theme-aero-light) select,
+body:not(.theme-aero-light) textarea {
+  background-color: var(--theme-card) !important;
+  color: var(--theme-text) !important;
+  border-color: var(--theme-border) !important;
+}
+
+body:not(.theme-aero-light) table thead {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+body:not(.theme-aero-light) table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
